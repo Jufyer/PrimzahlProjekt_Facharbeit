@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primzahlen Berechnung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Primzahlen Berechnung</h1>
+        <div class="auth-buttons">
+            <button onclick="showLogin()">Anmelden</button>
+            <button onclick="showRegister()">Registrieren</button>
+        </div>
+    </div>
+
+    <div class="user-panel" id="userPanel">
+        <h3>Dein Fortschritt</h3>
+        <p>Gefundene Primzahlen: <span id="userPrimes">0</span></p>
+        <p>Geprüfte Zahlen: <span id="userNumbersProcessed">0</span></p>
+        <button class="logoutBtn" onclick="logout()">Abmelden</button>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <button onclick="startSingleBatch()">Einmal berechnen</button>
+            <button onclick="startContinuous()">Dauerhaft berechnen</button>
+            <button id="stopBtn" onclick="stopCalculation()">Stop</button>
+        </div>
+
+        <div class="batch-control">
+            <input type="number" id="batchCount" value="1" min="1">
+            <button class="BatchCountStartBtn" onclick="startBatchCount()">Batches berechnen</button>
+        </div>
+
+        <div class="status" id="status">Bereit zur Berechnung...</div>
+
+        <div class="log" id="log">
+            <p>Logs:</p>
+        </div>
+
+        <div class="leaderboard" id="leaderboard">
+            <h3>Leaderboard 🏆</h3>
+            <ol id="leaderboardList"></ol>
+        </div>
+
+        <button class="leaderboard-toggle" id="leaderboard-toggle" onclick="toggleLeaderboard()">Leaderboard
+            anzeigen</button>
+
+        <div class="info-panel">
+            <p>Aktuell größte Primzahl: <span id="highestPrime">0</span></p>
+            <p>Aktuelle Batch-Größe: <span id="currentBatchSize">100000</span> Zahlen</p>
+        </div>
+
+        <div class="batch-size-selector">
+            <label for="batchSizeSelect">Batch-Größe:</label>
+            <select id="batchSizeSelect">
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1.000</option>
+                <option value="5000">5.000</option>
+                <option value="10000">10.000</option>
+                <option value="50000">50.000</option>
+                <option value="100000" selected>100.000</option>
+                <option value="500000">500.000</option>
+                <option value="1000000">1.000.000</option>
+                <option value="1500000">1.500.000</option>
+                <option value="2000000">2.000.000</option>
+                <option value="2500000">2.500.000</option>
+                <option value="3000000">3.000.000</option>
+                <option value="3500000">3.500.000</option>
+                <option value="4000000">4.000.000</option>
+                <option value="4500000">4.500.000</option>
+                <option value="5000000">5.000.000</option>
+            </select>
+            <button onclick="updateBatchSize()">Übernehmen</button>
+        </div>
+
+        <div class="stats">
+            <button onclick="loadAllDiagrams()">Alle Diagramme laden</button>
+            <div id="diagram-container"></div>
+        </div>
+
+    </div>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Anmelden</h3>
+            <input type="text" id="authUsername" placeholder="Benutzername">
+            <input type="password" id="authPassword" placeholder="Passwort">
+            <button id="authAction" onclick="performAuth()">Anmelden</button>
+            <button onclick="hideModal()">Abbrechen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
