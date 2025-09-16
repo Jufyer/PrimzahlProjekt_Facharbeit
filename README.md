@@ -1,2 +1,8 @@
-Dies ist der Quellcode für meine Facharbeit der 11. Klasse auf dem Gymansium Coswig. Es handelt sich um eine Website, welche dazu dient die Grunprinzipien von Volunteer Computing zu zeigen.  
-Die aktuelle Verision kann auf dieser Website angesehen und getestet werden: https://primzahlen.julian-anders.de/
+# Facharbeits-Projekt Volunteer Computing
+
+Dies ist der Quellcode meiner Facharbeit (11. Klasse, Gymnasium Coswig).  
+Die Website demonstriert die Grundprinzipien von Volunteer Computing.
+
+Live-Version: [https://primzahlen.julian-anders.de/](https://primzahlen.julian-anders.de/)
+
+Die hier bereitgestellten Dateien wurden am 16.09.2025 um 18:14 Uhr vom Server heruntergeladen.
