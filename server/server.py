@@ -37,7 +37,7 @@ app = Flask(
     static_url_path=""
 )
 
-app.secret_key = 'ieu:DNMf<#k0g)r'
+app.secret_key = <secret_key>
 
 BATCH_SIZE = 100000  
 CLIENT_TIMEOUT = 20  # in Sek
@@ -404,4 +404,5 @@ cleanup_inactive_clients()
 
 if __name__ == '__main__':
     print("Flask wurde gestartet!")
+
     app.run(host="0.0.0.0", debug=False, use_reloader=False)
